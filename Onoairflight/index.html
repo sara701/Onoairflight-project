@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnoAir</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #0077cc;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+        main {
+            padding: 20px;
+            background-color: white;
+            margin: 20px auto;
+            width: 90%;
+            max-width: 1200px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section {
+            margin-bottom: 30px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"], input[type="date"], input[type="time"], input[type="number"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #0077cc;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #005fa3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #0077cc;
+            color: white;
+        }
+        img.booking-image {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #0077cc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html" style="text-decoration: none; color: white;">OnoAir</a></h1>
+        <nav>
+            <a href="manage_flights.html">Manage Flights</a>
+            <a href="manage_destinations.html">Manage Destinations</a>
+            <a href="book_flight.html">Book a Flight</a>
+            <a href="my_bookings.html">My Bookings</a>
+            <a href="help.html">Help</a>
+        </nav>
+    </header>
+    <main>
+        <h2>Welcome to OnoAir</h2>
+        <p>Find the best flight deals and manage your travel with ease.</p>
+
+        <!-- New Flight Form -->
+        <section id="new-flight-form">
+            <h3>New Flight</h3>
+            <form id="add-flight-form">
+                <label for="flight-no">Flight No.:</label>
+                <input type="text" id="flight-no" name="flight-no" placeholder="Enter flight number" required>
+
+                <label for="origin">Origin:</label>
+                <input type="text" id="origin" name="origin" placeholder="Enter departure city" required>
+
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" placeholder="Enter destination city" required>
+
+                <label for="boarding-date">Boarding Date:</label>
+                <input type="date" id="boarding-date" name="boarding-date" required>
+
+                <label for="boarding-time">Boarding Time:</label>
+                <input type="time" id="boarding-time" name="boarding-time" required>
+
+                <label for="arrival-date">Arrival Date:</label>
+                <input type="date" id="arrival-date" name="arrival-date" required>
+
+                <label for="arrival-time">Arrival Time:</label>
+                <input type="time" id="arrival-time" name="arrival-time" required>
+
+                <label for="seats">No. of Seats:</label>
+                <input type="number" id="seats" name="seats" min="1" placeholder="Enter number of seats" required>
+
+                <input type="submit" value="Save">
+            </form>
+        </section>
+
+        <!-- Table for My Bookings -->
+        <section id="my-bookings">
+            <h3>My Bookings</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Origin</th>
+                        <th>Boarding Time</th>
+                        <th>Destination</th>
+                        <th>Landing Time</th>
+                        <th>No. of Passengers</th>
+                        <th>Image</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Tel Aviv</td>
+                        <td>16/7/2025 20:00</td>
+                        <td>Krakow</td>
+                        <td>17/7/2025 01:00</td>
+                        <td>5</td>
+                        <td><img src="images/tel_aviv.jpg" alt="Tel Aviv" class="booking-image"></td>
+                    </tr>
+                    <tr>
+                        <td>Krakow</td>
+                        <td>20/5/2024 20:00</td>
+                        <td>Larnaca</td>
+                        <td>21/5/2024 02:00</td>
+                        <td>6</td>
+                        <td><img src="images/larnaca.jpg" alt="Larnaca" class="booking-image"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 OnoAir. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
+
+
+

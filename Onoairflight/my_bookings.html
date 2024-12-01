@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* עיצוב טבלה */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        th {
+            background-color: #0077cc;
+            color: white;
+        }
+        img.booking-image {
+            width: 100px;
+            height: auto;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>My Bookings</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Origin</th>
+                    <th>Boarding Time</th>
+                    <th>Destination</th>
+                    <th>Landing Time</th>
+                    <th>No. of Passengers</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Tel Aviv</td>
+                    <td>16/7/2025 20:00</td>
+                    <td>Krakow</td>
+                    <td>17/7/2025 01:00</td>
+                    <td>5</td>
+                    <td><img src="images/tel_aviv.jpg" alt="Tel Aviv" class="booking-image"></td>
+                    <td><button>View Details</button></td>
+                </tr>
+                <tr>
+                    <td>Krakow</td>
+                    <td>20/5/2024 20:00</td>
+                    <td>Larnaca</td>
+                    <td>21/5/2024 02:00</td>
+                    <td>6</td>
+                    <td><img src="images/larnaca.jpg" alt="Larnaca" class="booking-image"></td>
+                    <td><button>View Details</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+

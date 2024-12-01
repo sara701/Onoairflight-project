@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Destinations - OnoAir</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>OnoAir - Manage Destinations</h1>
+        <nav>
+            <a href="manage_flights.html">Manage Flights</a>
+            <a href="manage_destinations.html">Manage Destinations</a>
+            <a href="book_flight.html">Book a Flight</a>
+            <a href="my_bookings.html">My Bookings</a>
+            <a href="help.html" class="help-link">Help</a>
+        </nav>
+    </header>
+    <main>
+        <!-- טבלה לניהול יעדים -->
+        <section class="destinations-section">
+            <h2>Manage Destinations</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Destination Code</th>
+                        <th>Destination Name</th>
+                        <th>Airport Name</th>
+                        <th>Airport Website</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- דוגמה ליעד -->
+                    <tr>
+                        <td>TLA</td>
+                        <td>Tel Aviv</td>
+                        <td>Ben Gurion Airport</td>
+                        <td><a href="https://www.iaa.gov.il/en/" target="_blank">Visit Site</a></td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>NYC</td>
+                        <td>New York</td>
+                        <td>John F. Kennedy International Airport</td>
+                        <td><a href="https://www.jfkairport.com/" target="_blank">Visit Site</a></td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <!-- הוסף שורות נוספות לפי הצורך -->
+                </tbody>
+            </table>
+            <button class="add-destination-btn">Add Destination</button>
+        </section>
+
+        <!-- טופס להוספת יעד חדש -->
+        <section class="add-destination-section">
+            <h2>New Destination</h2>
+            <form action="add_destination.html" method="POST">
+                <label for="destination-code">Destination Code:</label>
+                <input type="text" id="destination-code" name="destination-code" required><br>
+                <label for="destination-name">Destination Name:</label>
+                <input type="text" id="destination-name" name="destination-name" required><br>
+                <label for="airport-name">Airport Name:</label>
+                <input type="text" id="airport-name" name="airport-name" required><br>
+                <label for="airport-url">Airport URL:</label>
+                <input type="url" id="airport-url" name="airport-url" required><br>
+                <label for="image-url">Image URL:</label>
+                <input type="url" id="image-url" name="image-url"><br>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 OnoAir. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

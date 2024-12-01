@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Flights - OnoAir</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>OnoAir - Manage Flights</h1>
+        <nav>
+            <a href="manage_flights.html">Manage Flights</a>
+            <a href="manage_destinations.html">Manage Destinations</a>
+            <a href="book_flight.html">Book a Flight</a>
+            <a href="my_bookings.html">My Bookings</a>
+            <a href="help.html" class="help-link">Help</a>
+        </nav>
+    </header>
+    <main>
+        <!-- טבלה לניהול טיסות -->
+        <section class="flights-section">
+            <h2>Manage Flights</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Flight No.</th>
+                        <th>Origin</th>
+                        <th>Destination</th>
+                        <th>Boarding Date</th>
+                        <th>Boarding Time</th>
+                        <th>Arrival Date</th>
+                        <th>Arrival Time</th>
+                        <th>No. of Seats</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- דוגמה לטיסה -->
+                    <tr>
+                        <td>W61283</td>
+                        <td>Tel Aviv</td>
+                        <td>Krakow</td>
+                        <td>16/7/2025</td>
+                        <td>20:00</td>
+                        <td>17/7/2025</td>
+                        <td>01:00</td>
+                        <td>150</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td>LX8396</td>
+                        <td>Larnaca</td>
+                        <td>Zurich</td>
+                        <td>20/5/2024</td>
+                        <td>22:30</td>
+                        <td>21/5/2024</td>
+                        <td>02:00</td>
+                        <td>180</td>
+                        <td><button>Edit</button> <button>Delete</button></td>
+                    </tr>
+                    <!-- הוסף שורות נוספות לפי הצורך -->
+                </tbody>
+            </table>
+            <button class="add-flight-btn">Add Flight</button>
+        </section>
+
+        <!-- טופס להוספת טיסה חדשה -->
+        <section class="add-flight-section">
+            <h2>New Flight</h2>
+            <form action="add_flight.html" method="POST">
+                <label for="flight-no">Flight No.:</label>
+                <input type="text" id="flight-no" name="flight-no" required><br>
+                <label for="origin">Origin:</label>
+                <input type="text" id="origin" name="origin" required><br>
+                <label for="destination">Destination:</label>
+                <input type="text" id="destination" name="destination" required><br>
+                <label for="boarding-date">Boarding Date:</label>
+                <input type="date" id="boarding-date" name="boarding-date" required><br>
+                <label for="boarding-time">Boarding Time:</label>
+                <input type="time" id="boarding-time" name="boarding-time" required><br>
+                <label for="arrival-date">Arrival Date:</label>
+                <input type="date" id="arrival-date" name="arrival-date" required><br>
+                <label for="arrival-time">Arrival Time:</label>
+                <input type="time" id="arrival-time" name="arrival-time" required><br>
+                <label for="no-of-seats">No. of Seats:</label>
+                <input type="number" id="no-of-seats" name="no-of-seats" min="1" required><br>
+                <button type="submit">Save</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 OnoAir. All Rights Reserved.</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
